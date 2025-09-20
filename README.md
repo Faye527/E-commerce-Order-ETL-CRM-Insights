@@ -15,6 +15,7 @@ This project simulates how data engineers and analysts work together to process 
 ---
 
 ## 📂 Project Structure
+```plaintext
 ecommerce-etl-crm-insights/
 ├── data/                   # Raw & processed data
 │   ├── raw_data/           # Input CSVs
@@ -39,6 +40,7 @@ ecommerce-etl-crm-insights/
 │
 ├── requirements.txt        # Dependencies
 └── README.md               # Documentation
+
 
 ---
 
