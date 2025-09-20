@@ -16,22 +16,29 @@ This project simulates how data engineers and analysts work together to process 
 
 ## 📂 Project Structure
 ecommerce-etl-crm-insights/
-│── data/ # Sample raw CSV files (anonymized, not full dataset)
-│── src/ # ETL scripts
-│ ├── extract.py # Extract raw CSVs
-│ ├── transform.py # Clean & standardize data
-│ ├── load.py # Load into SQL DB
-│ ├── pipeline.py # Orchestrate full ETL
-│── sql/
-│ ├── schema.sql # Fact & dimension tables (star schema)
-│ ├── queries.sql # Business queries
-│── notebooks/
-│ ├── crm_analysis.ipynb # RFM & user behavior analysis
-│── dashboard/
-│ ├── tableau.twbx # Tableau dashboards
-│ ├── powerbi.pbix # Power BI dashboards
-│── requirements.txt # Python dependencies
-│── README.md # Project documentation
+├── data/                   # Raw & processed data
+│   ├── raw_data/           # Input CSVs
+│   └── processed/          # Cleaned data
+│
+├── src/                    # ETL scripts
+│   ├── extract.py          # Extract raw CSVs
+│   ├── transform.py        # Clean & standardize
+│   ├── load.py             # Load into SQL DB
+│   └── pipeline.py         # Orchestrate ETL
+│
+├── sql/                    # SQL schema & queries
+│   ├── schema.sql          # Fact & dimension tables
+│   └── queries.sql         # Business queries
+│
+├── notebooks/              # Analysis & CRM
+│   └── crm_analysis.ipynb  # RFM & user insights
+│
+├── dashboard/              # Dashboards
+│   ├── tableau.twbx        # Tableau
+│   └── powerbi.pbix        # Power BI
+│
+├── requirements.txt        # Dependencies
+└── README.md               # Documentation
 
 ---
 
