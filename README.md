@@ -1,25 +1,74 @@
-E-commerce Order ETL & CRM Insights
+ E-commerce Order ETL & CRM Insights
 
-This project demonstrates an end-to-end ETL pipeline and customer insights workflow built on real-world e-commerce order data. Multiple raw CSV exports (orders across different dates) were ingested, cleaned, and consolidated into a structured database for downstream analytics and CRM-style insights.
+A complete **ETL pipeline + analytics project** built from raw e-commerce order data.  
+This project simulates how data engineers and analysts work together to process raw data, build a clean star schema, and generate CRM-driven insights for business decision-making.  
 
-🔑 Key Features
+---
 
-ETL Pipeline: Automated ingestion of multiple CSV exports, data cleaning (deduplication, missing value handling, currency/date normalization), and structured loading into a relational schema (fact tables & dimension tables).
+ 🚀 Features
+- ETL Pipeline (Python + Pandas): Extract raw CSV orders, clean & standardize schema, load into database.  
+- Data Warehouse Modeling: Designed fact & dimension tables (Star Schema).  
+- SQL Analytics: Built queries for revenue, customer segmentation, and retention metrics.  
+- CRM Insights (RFM Model): Identified high-value customers and churn risk.  
+- Dashboarding: Interactive insights in Tableau / Power BI.  
 
-Data Quality & Logging: Built-in checks for duplicates, null values, and abnormal orders, with logs documenting pipeline execution.
+---
 
-CRM Analysis: Implemented RFM (Recency, Frequency, Monetary) segmentation, churn rate calculation, repeat purchase analysis, and customer lifetime value trends.
+ 📂 Project Structure
+ecommerce-etl-crm-insights/
+│── data/ # Sample raw CSV files (anonymized, not full dataset)
+│── src/ # ETL scripts
+│ ├── extract.py # Extract raw CSVs
+│ ├── transform.py # Clean & standardize data
+│ ├── load.py # Load into SQL DB
+│ ├── pipeline.py # Orchestrate full ETL
+│── sql/
+│ ├── schema.sql # Fact & dimension tables (star schema)
+│ ├── queries.sql # Business queries
+│── notebooks/
+│ ├── crm_analysis.ipynb # RFM & user behavior analysis
+│── dashboard/
+│ ├── tableau.twbx # Tableau dashboards
+│ ├── powerbi.pbix # Power BI dashboards
+│── requirements.txt # Python dependencies
+│── README.md # Project documentation
 
-Business Insights: Identified top-performing products, high-value customers, and refund/return patterns to inform product and marketing strategies.
 
-Dashboarding: Interactive dashboards (Tableau/Power BI) visualize GMV growth, order trends, customer cohorts, and retention metrics.
+## ⚙️ Setup Instructions
+
+ 1. Create Environment
+```bash
+conda create -n ecommerce-etl-env python=3.10 -y
+conda activate ecommerce-etl-env
+pip install -r requirements.txt
+python src/pipeline.py
+
+📊 Example Queries
+
+Revenue by month & category
+
+Repeat purchase rate
+
+RFM segmentation (Recency, Frequency, Monetary)
+
+High-return SKUs
 
 🛠️ Tech Stack
 
-Languages & Libraries: Python (Pandas, NumPy, logging), SQL (Joins, CTEs, Window Functions)
+Python (pandas, numpy, sqlalchemy, scikit-learn)
 
-Data Infrastructure: SQLite / PostgreSQL, CSV ingestion
+SQL (schema design, queries)
 
-Visualization: Tableau / Power BI
+Visualization: Tableau, Power BI, matplotlib, seaborn, plotly
 
-Workflow: Modular Python scripts for ETL; optional scheduling with Airflow/Prefect
+Jupyter for CRM analysis
+
+🌟 Skills Highlighted
+
+End-to-end ETL pipeline design
+
+SQL data modeling (Star Schema, Fact & Dimension tables)
+
+CRM customer segmentation (RFM)
+
+Dashboard building & storytelling with data
