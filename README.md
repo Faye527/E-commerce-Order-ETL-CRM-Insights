@@ -15,42 +15,36 @@ This project simulates how data engineers and analysts work together to process 
 ---
 
 ## 📂 Project Structure
+
 ```plaintext
 ecommerce-etl-crm-insights/
-├── data/                   # Raw & processed data
-│   ├── raw_data/           # Input CSVs
-│   └── processed/          # Cleaned data
-│
-├── src/                    # ETL scripts
-│   ├── extract.py          # Extract raw CSVs
-│   ├── transform.py        # Clean & standardize
-│   ├── load.py             # Load into SQL DB
-│   └── pipeline.py         # Orchestrate ETL
-│
-├── sql/                    # SQL schema & queries
-│   ├── schema.sql          # Fact & dimension tables
-│   └── queries.sql         # Business queries
-│
-├── notebooks/              # Analysis & CRM
-│   └── crm_analysis.ipynb  # RFM & user insights
-│
-├── dashboard/              # Dashboards
-│   ├── tableau.twbx        # Tableau
-│   └── powerbi.pbix        # Power BI
-│
-├── requirements.txt        # Dependencies
-└── README.md               # Documentation
+├── data/                     # Raw & processed data
+│   ├── raw_data/             # Input CSVs
+│   └── processed/            # Cleaned data
+├── src/                      # ETL scripts
+│   ├── extract.py            # Extract raw CSVs
+│   ├── transform.py          # Clean & standardize
+│   ├── load.py               # Load into SQL DB
+│   └── pipeline.py           # Orchestrate ETL
+├── sql/                      # SQL schema & queries
+│   ├── schema.sql            # Fact & dimension tables (star schema)
+│   └── queries.sql           # Business queries
+├── notebooks/                # Analysis & CRM
+│   └── crm_analysis.ipynb    # RFM & user insights
+├── dashboard/                # Dashboards
+│   ├── tableau.twbx          # Tableau dashboard
+│   └── powerbi.pbix          # Power BI dashboard
+├── requirements.txt          # Python dependencies
+└── README.md                 # Documentation
 
-、、、
 ---
-
-## ⚙️ Setup Instructions
-
-### 1. Create Environment
+⚙️ Setup Instructions
+1. Create Environment
 ```bash
 conda create -n ecommerce-etl-env python=3.10 -y
 conda activate ecommerce-etl-env
 pip install -r requirements.txt
+2. Run ETL Pipeline
 python src/pipeline.py
 
 ---
